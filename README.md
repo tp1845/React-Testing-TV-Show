@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Testing TV Show
 
-## Available Scripts
+## Advanced Web Applications ➡ Testing React
 
-In the project directory, you can run:
+### Objectives
 
-### `yarn start`
+- use mocks in unit tests
+- test asynchronous API calls that are made in a component
+- test React components as the props change
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Introduction
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As a developer, you will be asked to write tests for the feature you are building, and even sometimes on components and features other developers have built. This project will mimic a situation where you are asked to test someone else's code.
 
-### `yarn test`
+Get the project fired up and start using it as a user would. Try to go through the user sequences for this feature that you think users would go through. Once you have those in mind, you will have an idea of what to test in your application.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project Set Up
 
-### `yarn build`
+- [ ] Create a forked copy of this project.
+- [ ] Add your team lead as collaborator on Github.
+- [ ] Clone your OWN version of the repository in your terminal
+- [ ] CD into the project base directory `cd React-Testing-TV-Show`
+- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [ ] Push commits: git push origin `<firstName-lastName>`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps for completing your project.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [ ] Add your team lead as a reviewer on the pull-request
+- [ ] Your team lead will count the project as complete by merging the branch back into master.
+- [ ] Do your magic!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Instructions and/or completion requirements
 
-### `yarn eject`
+Your challenge for this module: write tests for both the `App.js` component and the `Episodesjs` component. Take note of where the state is being managed, where the async call is, and where different data peices are being rendered. Understanding all of this will be important so you know how to test each component.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Moving the async call**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The async call being inside the component makes it hard to test the asynchronous nature of the component. Let's move the async function into an `/api` directory so we can easily mock that function and make the async tests easier.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Create a directory called `/api` in the `src` directory
+1. Create a file inside `/api` called `fetchShow.js`
+1. Move `fetchShow` into that new file and export it (fetchShow is in the `useEffect`)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Note that you need `axios` in this file
 
-## Learn More
+1. Import `fetchShow` into `App.js` so you can make your async call from your `useEffect` hook.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Stretch goals
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- There is an utility function in this project that contains an isolated pure function. Look up how to do `unit tests` with Jest and test that function.
 
-### Code Splitting
+- Look up the `TVMaze` API. Add a dropdown with the titles of some other popular shows. Add the user sequence of choosing a different show to fetch data for different shows.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Add React Router, and add the functionality to click an episode and navigate to an episode page.

@@ -1,0 +1,106 @@
+html,
+body,
+.App,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #070724;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.poster-img {
+  width: 400px;
+}
+
+.Dropdown-root {
+  text-align: left;
+  padding: 8px;
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.Dropdown-option,
+.Dropdown-placeholder {
+  padding: 6px;
+}
+
+.Dropdown-option {
+  padding-left: 12px;
+}
+
+.Dropdown-option:hover {
+  background-color: #464670;
+}
+
+.episodes {
+  padding-top: 32px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.episode {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c0c2bd3;
+  color: #070724;
+  width: 250px;
+  border-radius: 6px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: #ffffff;
+  margin: 16px;
+}
+
+.episode-image {
+  width: 250px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.episode-info {
+  height: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.episode-info > h3,
+.episode-info > p {
+  margin: 0;
+}
+
+.episode-info > h3 {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.episode-number {
+  font-size: 0.8rem;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+p.episode-runtime {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
