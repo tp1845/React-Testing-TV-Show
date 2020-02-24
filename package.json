@@ -13,7 +13,7 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-dropdown": "1.6.4",
-    "react-scripts": "3.0.1"
+    "react-scripts": "^3.4.0"
   },
   "devDependencies": {
     "typescript": "3.3.3"
