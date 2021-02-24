@@ -14,7 +14,7 @@ As a developer, you will be asked to write tests for the feature you are buildin
 
 Get the project fired up and start using it as a user would. Try to go through the user sequences for this feature that you think users would go through. Once you have those in mind, you will have an idea of what to test in your application.
 
-### Project Set Up
+### Project Set-Up
 
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
@@ -32,7 +32,7 @@ Follow these steps for completing your project.
 
 ### Instructions and/or completion requirements
 
-Your challenge for this module: write tests for both the `App.js` component and the `Episodesjs` component. Take note of where the state is being managed, where the async call is, and where different data peices are being rendered. Understanding all of this will be important so you know how to test each component.
+Your challenge for this module: write tests for both the `App.js` component and the `Episodesjs` component. Take note of where the state is being managed, where the async call is, and where different data pieces are being rendered. Understanding all of this will be important so you know how to test each component.
 
 **Moving the async call**
 
@@ -67,7 +67,7 @@ useEffect(() => {
 
 ### Stretch goals
 
-- There is an utility function in this project that contains an isolated pure function. Look up how to do `unit tests` with Jest and test that function.
+- There is a utility function in this project that contains an isolated pure function. Look up how to do `unit tests` with Jest and test that function.
 
 - Look up the `TVMaze` API. Add a dropdown with the titles of some other popular shows. Add the user sequence of choosing a different show to fetch data for different shows.
 
